@@ -1,0 +1,1543 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img{
+  width:100%;
+  height:auto;
+  margin:auto;
+}
+/******************************************************** Body ********************************************************************/
+body {
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+/******************************************************* Header*********************************************************************/
+.navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 1;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #3264f5 0%, #7201BB 51%, #3264f5 100%);
+  
+}
+.navbar .navbar:hover, .navbar:focus {
+  background-position: right center;
+}
+.wexim {
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 25px;
+  left: 60px;
+  font-size: 40px;
+  opacity: 1;
+  font-weight: 600;
+
+}
+.point {
+  width: 10px;
+  height: 10px;
+  background: rgba(95,229,247,1);
+  opacity: 1;
+  position: absolute;
+  top: 60px;
+  left: 188px;
+  border-radius: 50%;
+}
+.menuu{
+  display: flex;
+  color: white;
+  font-size: 20px;
+  margin-left: 47%;
+  font-weight: bold;
+
+  /* display: none; XR iPad*/
+}
+.contact {
+  width: 150px;
+  opacity: 1;
+}
+.blog {
+  width: 100px;
+  opacity: 1;
+
+}
+.work {
+  width: 100px;
+  opacity: 1;
+}
+.team {
+  width: 100px;
+  opacity: 1;
+}
+.aboutt {
+  width: 100px;
+  opacity: 1;
+}
+
+.bar-menu {
+  width: 40px;
+  opacity: 1;
+  height: 3px;
+  background: white;
+  transform: rotate(90deg);
+  margin-left: -2%;
+  margin-top: 2%;
+}
+/******************************************************* Menu Burger *********************************************************************/
+.container{
+  width: 100%;
+  height: 100vh;
+}
+.btn{
+  top: 17px;
+  right: 60px;
+  height: 65px;
+  width: 65px;
+  padding: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.btn .bar1, .btn .bar2, .btn .bar3
+{
+  height: 3px;
+  width: 100%;
+  display: block;
+  background: white;
+}
+.fbtn{
+  top: 10px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 9999;
+}
+.fbtn .bar1{
+  transform: rotate(-130deg);
+  height: 4px;
+  width: 90%;
+  display: block;
+  background: white;
+  position: absolute;
+}
+.fbtn .bar2{
+  display: none;
+}
+.fbtn .bar3{
+  transform: rotateZ(130deg);
+  height: 4px;
+  width: 90%;
+  display: block;
+  background: white;
+  position: absolute;
+}
+.menu{
+  display: none;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  top: 0;
+}
+.omenu{
+  width: 40vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, color-stop(2%, #0176bb), color-stop(82%, #3264f5));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.omenu ul{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  list-style-type: none;
+}
+.omenu ul li{
+  padding: 8px;
+  list-style-type: none;
+}
+.omenu ul li a{
+  text-decoration: none;
+  font-size: 3vw;
+  font-weight: 400;
+  color: white;
+}
+.omenu ul li a:hover{
+  border-bottom: 5px solid white;
+  transform: rotate(180deg);
+}
+/******************************************************* Main*********************************************************************/
+.main {
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,1);
+  position: relative;
+  overflow: hidden;
+}
+/******************************************************* Carousel Banner*********************************************************************/
+.carousel {
+  width: 100%;
+  /*****va cacher ce qui dépasse de cette largeur de 100%*****/
+  overflow: hidden;
+  position: relative;
+}
+/* Alors que le carousel est à 100%, la ul, elle est à 400% soit 4 fois la largeur de la fenêtre */
+.carousel ul {
+  width: 400%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  left: -100%;
+  list-style-type: none;
+}
+/* L'élément de la liste, la li appelée par sa classe .item, quant à elle, ne fait que 100% de son parent (la ul)*/
+.carousel .item {
+  width: 100%;
+  position: relative;
+ 
+}
+.carousel .item.one{
+  background: linear-gradient(90deg, rgba(50,95,232,1) 0%, rgba(105,7,179,0.5) 90%),no-repeat url("../imgages/slider-image1.jpg");
+  background-size: cover;
+}
+.carousel .item.two{
+  background: linear-gradient(90deg, rgba(50,95,232,1) 0%, rgba(105,7,179,0.5) 90%),no-repeat url("../images/slider-image2.jpg");
+  background-size: cover;
+}
+.carousel .item.three{
+  background: linear-gradient(90deg, rgba(50,95,232,1) 0%, rgba(105,7,179,0.5) 90%),no-repeat url("../images/slider-image3.jpg");
+  background-size: cover;
+}
+.carousel .item.four{
+  background: linear-gradient(90deg, rgba(50,95,232,1) 0%, rgba(105,7,179,0.5) 90%),no-repeat url("../images/slider-image4.jpg");
+  background-size: cover;
+}
+/* La div est en position absolute par rapport au carousel qui est en position relative
+ et elle passe par dessus la li et la ul. */
+ .carousel .item div {
+  color: #ffffff;
+  position: absolute;
+  height:100%;
+}
+ .carousel .item div h2{
+  z-index: 6;
+  font-family: Poppins;
+  line-height: 40px;
+  letter-spacing: 0px;
+  font-weight: 500;
+  font-size: 18px;
+  border-color: rgb(43, 43, 43);
+  border-style: none;
+  margin: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  white-space: normal;
+  height: auto;
+  opacity: 1;
+  /* font-size: 30px; XR*/
+}
+.carousel .item div h3{
+  z-index: 7;
+  line-height: 80px;
+  letter-spacing: 0px;
+  font-weight: 600;
+  font-size: 46px;
+  border-color: rgb(43, 43, 43);
+  border-style: none;
+  margin: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  white-space: nowrap;
+  width: auto;
+  height: auto;
+  /* font-size: 42px;  XR*/
+  /* font-size: 46px; ipad */
+  }
+
+.carousel .item.two div,.carousel .item.four div {
+  text-align:center;  
+  width:100%;
+  top:30%;
+  left: 0;
+}
+.carousel .item.one div {
+  text-align:center;  
+  width:50%;
+  left:0;
+  top:30%;
+  height:auto;
+  
+}
+.carousel .item.three div {
+  text-align:center;  
+  width:50%;
+  right:0;
+  top:30%;
+  height:auto;
+  
+}
+.carousel .item a.button{
+  z-index: 9;
+  background-color: rgb(255, 255, 255);
+  font-family: Poppins;
+  cursor: pointer;
+  line-height: 100px;
+  letter-spacing: 0px;
+  font-weight: 600;
+  font-size: 16px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-width: 2px;
+  margin: 0px;
+  border-radius: 31px;
+  padding: 9px 34px;
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  white-space: normal;
+  width: 170px;
+  height: 47px;
+  }
+  .carousel .item p{
+  z-index: 9;
+  font-family: Roboto;
+  line-height: 28px;
+  letter-spacing: 0px;
+  font-weight: 300;
+  font-size: 18px;
+  border-color: rgb(43, 43, 43);
+  border-style: none;
+  margin: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  color: rgb(255, 255, 255);
+  white-space: normal;
+  height: auto;
+  /* font-size: 14px;XR */
+  /* font-size: 18px; iPad air */
+  }
+
+.carousel .slideButton{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index:1100;
+  position: absolute;
+  bottom: 0;
+  height:100px;
+  width: 100%;
+  color: #ffffff;
+  background:transparent;
+  cursor: pointer;
+}
+button {
+  background-color: #00bcd4;
+  border: solid 1px #fff;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 1px 6px;
+  cursor: pointer;
+  border-radius: 20%;
+}
+/******************************************************* Aout*********************************************************************/
+.about{
+
+  width: 100%;
+  height: auto;
+  padding: 100px 0px 0px 0px;
+}
+article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about1{
+  display: flex;
+  margin-top: 8%;
+  width: 80%;
+  /******
+     
+    align-content: center;
+    align-items: center;*********iPhne XR*****/
+}
+.basicWexim{
+  display: flex;
+  flex-direction: column;
+}
+.basicWexim a{
+  width: 90%;
+  color: #00bcd4;
+  font-weight:600;
+  font-size: 24px;
+  opacity: 1;
+  /* margin-left: 15%;  *************** iPad Air*/
+  /**font-size: 18px;********iPhone XR********/
+}
+.basicWexim h2{
+  width: 110%;
+  color: rgba(0,0,0,1);
+  padding: 20px 0px 20px 0px;
+  font-size: 48px;
+  opacity: 1;
+  line-height: 1.2;
+  font-weight:600;
+  /* margin-left: 15%;   width: 80%;*************** iPad Air*/
+  /**font-size: 32px;   width: 80%;********iPhone XR********/
+}
+.lorem{
+  display: flex;
+  margin-top: 40px;
+  color: rgba(17,16,16,1);
+  font-size: 16px;
+  opacity: 1; 
+  padding: 0px 0px 0px 85px;
+  font-family: Roboto;
+  font-weight:100;
+  text-align: justify;
+  width: 100%;
+  /* margin-right: 10%; * *************** iPad Air*/
+  /*width: 100%; font-size:14px; 
+  padding: 0px 0px 0px 20px;
+  margin-bottom: 40px;********iPhone XR********/
+}
+aside{
+  display: flex;
+  margin: 100px;
+  /*flex-direction: column;
+  flex-direction: column;
+    width: 80%;
+    align-items: center;
+    align-content: center;********iPhone XR    iPad Ai ********/
+}
+aside article span{
+  font-weight: Bold;
+  font-size: 70px;
+  opacity: 1;
+  display: inline-block;
+  background: linear-gradient(to right, #3264f5 2%, #7201BB 82%);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  line-height: 1.2;
+}
+.troisD{
+  display: flex;
+  align-items: flex-start;
+  font-weight: 300;
+}
+.troisD h2{
+  margin: 20px 0px 20px 0px; 
+}
+.troisD P{
+  margin: 10px 25px 10px 0px;
+  text-align: justify;
+  font-weight: 200;
+  font-family: Roboto;
+  /*margin:0;********iPhone XR   iPad Ai********/
+}
+
+/******************************************************* Banner About*********************************************************************/
+.bannerabout {
+  background: linear-gradient(rgba(50,95,232,1) 0%, rgba(105,7,179,0.5) 90%),no-repeat,url("../images/imageabout.png");
+  width: 100vw;
+  height: 35em;
+  object-fit: cover;
+  position: relative;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.bannerabouttitre {
+  color:white;
+  display: flex;
+  font-weight: 500;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+  margin: 0px 0px 25px 230px;
+
+  /* display: flex;
+  font-size: 14px;
+  margin: 0px 0px 25px 36px;*******XR
+  font-size: 20;**************iPadAir */
+}
+.bannerabouttext {
+  width: 50%;
+  color: #00bcd4 ;
+  font-size: 42px;
+  opacity: 1;
+  text-align: left;
+  display: flex;
+  font-weight: 600;
+  margin: 0px 0px 25px 230px;
+  line-height: 1.2;
+
+  /* width: 80%;
+  font-size: 24px;
+  margin: 0px 0px 25px 36px;******** XR 
+  font-size: 36px; ******iPadAir*/
+  
+}
+.banneraboutp {
+  width: 50%;
+  color: rgba(255,255,255,1);
+  font-size: 12px;
+  display: flex;
+  margin: 0px 0px 10px 230px;
+  font-family: Roboto;
+  font-weight:100;
+  text-align: justify;
+  /* .banneraboutp {
+  width: 70%;
+  font-size: 12px;
+ 
+  margin: 0px 0px 10px 36px;
+   } **************************** XR
+   width: 78%;
+   font-size: 16px;
+  
+   margin: 0px 0px 10px 36px;
+    } **************************** iPadAir*/
+}
+
+/******************************************************* Equipe*********************************************************************/
+.equipe {
+  background:#ebe9eb;
+  opacity: 1;
+  left: 0px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 100px 0px 200px 0px;;
+}
+.team-bloc{
+  display: flex;
+  padding: 100px 0px 0px 0px;
+  height: 100%;
+  justify-content: center;
+
+  /* 
+  padding: 100px 0px 0px 0px;
+  height: 100%;
+  flex-direction: column;
+  align-content: center;
+  align-items: center; ***************XR*/
+}
+.titre-team span{
+  width: 330px;
+  font-weight: 600;
+  font-size: 24px;
+  opacity: 1;
+}
+.titre-team h3{
+  background: linear-gradient(to right, #3264f5 2%, #7201BB 82%);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: 64px;
+  line-height: 1.8;
+  font-weight: 600;
+}
+.titre-team p{
+  font-family: Roboto;
+  width: 60%;
+  font-weight: 200;
+}
+.equipe figure {
+  width: 300px;
+  height: 349px;
+}
+
+.equipe img{
+   object-fit: cover;
+   object-position: 50% 50%;
+}
+.titre-team{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+.team-box {
+  text-align: center;
+  margin: 0 10px;
+  display: inline-block;
+  padding: 20px;
+  background-color: #fbfbfb;
+  height: 38rem;
+
+  /* 
+    margin: 10% 10px;
+  
+    padding: 20px;
+   *************XR iPad Air*/
+}
+.team-text{
+  padding: 1rem 0 2.5rem 0;
+}
+.team-name{
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0;
+  background: #2b2b2b;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.team-designation{
+  text-align: center;
+  font-size: 15px;
+  margin: 0;
+  font-weight: 600;
+  background: #2b2b2b;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.progress-item{
+  padding: 10px 0;
+}
+.float-right {
+  float: right!important;
+}
+ .progress {
+  height: 15px;
+  margin-top: 5px;
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  background-color: #eaeaea;
+  position: relative;
+} 
+
+li::marker {
+  color:white;
+}
+
+ .progress-bar90{
+  border-radius: 50px; 
+  background: linear-gradient(to right, #3264f5 2%, #7201BB 82%);
+  width: 90%;
+  height: 15px;
+  top:0;
+  left:0;
+  position: absolute;  
+} 
+.progress-bar75{
+  border-radius: 50px; 
+  background: linear-gradient(to right, #3264f5 2%, #7201BB 82%);
+  width: 75%;
+  height: 15px;
+  top:0;
+  left:0;
+  position: absolute;  
+}
+.float-right {
+  float: right!important;
+}
+
+.team-progress .progress-item h6{
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 16px;
+}
+.float-left {
+  float: left!important;
+}
+
+/******************************************************* Works *********************************************************************/
+.portofolio{
+  margin:2% auto;
+}
+.works_category .selected{
+  text-decoration: underline;
+}
+.works{
+  width:80%;
+  margin:2% auto;
+}
+.works_container{
+  width: 100%;
+}
+.works_category ul{
+  width:100%;
+  height:auto;
+  display:flex;
+  text-align: center;
+  list-style-type: none;
+}
+.works_category{
+  width:100%;
+  height:auto;
+  padding: 2%;
+}
+.works_category ul li a{
+  color: linear-gradient(to right, #3264f5 2%, #7201BB 82%);
+  background-color:transparent; 
+  padding:0 px;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0px 0px 0px 10px;
+  font-weight: 600;
+}
+
+.works_category ul li a.selected{
+  text-decoration: underline; 
+
+} 
+/* Contient le bloc d'images */
+.all_works{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+}
+ /* Partie supérieure */
+.top_works{
+  display:flex;
+  width:100%;
+  height:100%; 
+}
+  /* Partie inférieure */
+.bottom_works{
+  display:flex;
+  width:100%;
+  height:100%;
+}
+/* Partie gauche */
+.left_works{
+  display:flex;
+  width:50%; 
+}
+ /* Partie droite */
+.right_works{
+  display:flex;
+  width:50%;
+}
+/* Bloc de droite en bas qui contient les 3 images */
+.bottom_works .right_works{
+  flex-direction:column;
+}
+/* Bloc en haut qui contient les deux petites images */
+.group_works_top{
+  width: 100%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  background-color: white;
+}
+ /* Bloc en bas à droite qui contient les deux petites images */
+.group_works_bottom{
+  width: 100%;
+  height:50%;
+  display:flex;
+  flex-direction: row;
+  background-color: black;
+}
+.full_height{
+  display:block;
+  width:100%;
+  height:100%;
+}
+/* bloc  avec largeur et hauteur 100%  */
+.small_height{
+  display:block;
+  width:100%;
+  height:50%;
+}
+ /* bloc  avec largeur 100% et hauteur moitié  */
+.full_width{
+  display:block;
+  width:100%;
+  height:50%;
+}
+/* bloc  avec largeur moitié et hauteur 100% */
+.small_width{
+  display:block;
+  width:50%;
+  height:100%;
+}
+/* bloc qui contient le figure */
+.work_one{
+  padding: 0;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  position: relative;
+  height: auto;
+}
+.work_one:hover{
+  background-color: #566784;
+}
+/* figure contenant l'image */
+.image_container{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  position: relative;
+}
+ /* L'ancre */
+ .work_one a{
+  text-decoration: none;
+}
+/* l'image fait 100% de son bloc hauteur et largeur confondues */
+.work_one img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.filter_hide{
+  display: none;
+}
+/* Changement de taille pour l'image et de la position en absolute pour déplacer l'élément avec animate() */
+.work_one.active{
+  width:23% !important;
+  height:350px !important;
+  position:absolute;
+  top:0;
+  left:0;
+  margin: 2% auto;
+}
+
+/* Rajout de la position relative pour le conteneur parent et du flex-direction pour aligner les éléments */
+.all_works.active{
+  flex-flow: row wrap;
+  position:relative;
+}
+.overlay{
+  position: absolute;
+  left: 0px; 
+  top: 0px;
+  right: 0px; 
+  bottom: 0px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  padding: 20% 40%;
+  -webkit-transition: all .5s ease-in .1s;
+  -o-transition: all .5s ease-in .1s;
+  transition: all .5s ease-in .1s;
+}
+
+.overlay:before{
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(50, 100, 245, 0.7) 2%, rgba(114, 2, 187, 0.71) 82%);
+}
+
+.image_container:hover .overlay,
+.image_container:focus .overlay {
+  opacity: 1; visibility: visible;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.image_container:hover .overlay{
+  opacity: 1; visibility: visible;
+}
+.overlay-content{
+  display: flex;
+}
+
+.plus{
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.plus::before,
+.plus::after {
+  content: " ";
+  position: absolute;
+  background: #fff;
+}
+.plus::after {
+  height: 2px;
+  margin-top: -1px;
+  top: 50%;
+  left: 5px;
+  right: 5px;
+   
+}
+.plus::before {
+  width: 2px;
+  margin-left: -1px;
+  left: 50%;
+  top: 5px;
+  bottom: 5px;
+}
+.overlay > h4{
+  position: relative;
+  color: #fff;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: 500;
+  width: 125px;
+  left: -12px;
+}
+
+.overlay > p{
+  position: relative;
+  color: #fff;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;  
+  width: 140px;
+  left: -15px;
+
+}
+
+
+/******************************************************* Blog *********************************************************************/
+.wx-b{
+  width:100%;
+  height: auto;
+  background: #e6ecf1bd;
+  margin-top: 35%;
+}
+.wx-blog{
+  width: 100%;
+  margin-top: 15%;
+  height: auto;
+  padding: 10%;
+}
+
+.wx-blog .ligne{
+  margin:2% auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* margin: 10% 0% 20% 0%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+   ********* XR*/
+  
+}
+.wx-blog .image-blog{
+  width: 120%;
+  height: 120%;
+
+  /* width: 100%;
+    height: 100%; ****** XR*/
+}
+.wx-blog .image-blog img{
+  width: 120%;
+  height: 120%;
+  /* width: 100%;
+    height: 100%; ****** XR*/
+  
+}
+.wx-blog .blog-box1{
+  margin-left: 10%;
+  /* margin: 10px 0px 0px 0;   margin-left: 0; *** XR*/
+}
+.wx-blog .blog-box2{
+  margin-right: 10%;
+   /*     margin-right: 0;
+    padding: 10px 0 40px 0; *** XR*/
+}
+.wx-blog .blog-date{
+  color: #00bcd4;
+  font-size: 15px;
+  margin: 0;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.wx-blog .blog-title{
+  font-size: 2.5rem;
+  margin: 0;
+  background: #232323;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  margin-bottom:15px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+.wx-blog .blog-text{
+  font-family: Roboto;
+  text-align: justify;
+  font-size: 12px;
+  margin-bottom: 10%;
+}
+.wx-blog .btn-blog {
+  font-size: 14px;
+  padding: 13px 35px;
+  line-height: 1.2;
+  color: #ffffff;
+  font-weight: 500;
+  flex: 1 1 auto;
+  border-radius: 50px;
+  transition: all 0.5s ease-in-out;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #3264f5 0%, #7201BB 51%, #3264f5 100%);
+}
+.wx-blog .btn-blog:hover, .btn-blog:focus {
+  color: #fff;
+  background-position: right center;
+}
+
+.wx-blog .blog-image{
+  display: inline-block;
+  margin-bottom: -5px;
+}
+.hover-effect {
+  position: relative;
+  overflow: hidden;
+}
+.hover-effect::before, .hover-effect::after {
+  content: "";
+  background: #fff;
+  height: 0;
+  width: 0;
+  z-index: 1;
+  position: absolute;
+  -webkit-transition-duration: 1.3s;
+  -o-transition-duration: 1.3s;
+  transition-duration: 1.3s;
+}
+.hover-effect:hover::after, .hover-effect:hover::before {
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+}
+.hover-effect::after {
+  bottom: 0;
+  opacity: .7;
+  left: 0;
+}
+.hover-effect::before {
+  right: 0;
+  opacity: 1;
+  top: 0;
+}
+
+.hover-effect::before, .hover-effect::after {
+  content: "";
+  background: #fff;
+  height: 0;
+  width: 0;
+  z-index: 1;
+  position: absolute;
+  -webkit-transition-duration: 1.3s;
+  -o-transition-duration: 1.3s;
+  transition-duration: 1.3s;
+}
+ /* Changement de taille pour le bloc image et  position en absolute*/
+ .work_one.active{
+  width:25%;
+  height:auto;
+  position:absolute;
+  top:0;
+  left:0;
+  /* margin: 2% auto; */
+  /* animation: myAnimToTheLeft 1s ease 0s 1 normal forwards;   */
+}
+  /* Rajout du flex-direction pour aligner les éléments */
+.all_works.active{
+flex-flow: row wrap;    
+}
+/* Pour Zomm des images a completer
+.active { 
+  transform: scale(1.1);
+     
+} */
+/******************************************************* Contact *********************************************************************/
+.contact-adresse {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;  
+}
+.map{
+  display: flex;
+  width:50%; 
+  height:40rem;
+}
+.information{
+  display: flex;
+  flex: 1 1 auto;
+  transition: all 0.5s ease-in-out;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(to right, #3264f5 0%, #7201BB 51%, #3264f5 100%);
+  background-position: center center;
+  background-size: cover;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 40rem; 
+}
+.information:hover, .information:focus {
+  background-position: right center;
+}
+.contact-adresse .information .i{
+  color: rgba(255,255,255,1);
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 600;
+  font-style:normal;
+  display: flex;
+  margin-left: 10%;
+}
+.contact-adresse .information h2{
+  color: #00bcd4;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 600;
+  display: flex;
+  width: 55%;
+  margin-left: 10%;
+}
+.contact-adresse .information address{
+  color: rgba(255,255,255,1);
+  font-weight: 600;
+  font-size: 18px;
+  font-style:normal;
+  display: flex;
+  margin-left: 10%;
+}
+.contact-adresse .information .liste-p{
+  color: rgba(255,255,255,1);
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 10%;  
+}
+
+
+
+/************************** RS*************************/
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .wexim-footer{
+  color: #939494;
+  top: 25px;
+  left: 60px;
+  font-size: 40px;
+  font-weight: 600;
+  display: flex;
+
+}
+
+.footer-bottom {
+  margin: 2% auto;
+  display: flex;
+}
+
+.text-small{
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.carre{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5px;
+}
+ion-icon {
+  color: white;
+  font-size: 30px;
+
+}
+.facebook{
+  background-color: #939494;
+  font-size: 10px;
+}
+.facebook:hover{
+  background-color: #3b5998;
+}
+.twitter{
+  background-color: #939494;
+  font-size: 10px;
+}
+.twitter:hover{
+  background-color:  #26a7de;
+}
+.instagram{
+  background-color: #939494;
+  font-size: 10px;
+}
+.instagram:hover{
+  background-color:  #E1306C;
+}
+.pinterest{
+  background-color: #939494;
+  font-size: 10px;
+}
+.pinterest:hover{
+  background-color: #E60023;
+}
+.linkedin{
+  background-color: #939494;
+  font-size: 10px;
+}
+.linkedin:hover{
+  background-color:  #3b5998;
+}
+.google{
+  background-color: #939494;
+  font-size: 10px;
+}
+.google:hover{
+  background-color:  #0F9D58;
+}
+
+/*
+.twitter {
+  width: 43px;
+  height: 38px;
+  background: url("../images/twitter.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 33px;
+  left: 587px;
+  overflow: hidden;
+}
+.email {
+  width: 43px;
+  height: 38px;
+  background: url("../images/email.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 33px;
+  left: 514px;
+  overflow: hidden;
+}
+.facebook {
+  width: 43px;
+  height: 43px;
+  background: url("../images/v36_7.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 31px;
+  left: 297px;
+  overflow: hidden;
+}
+.g+ {
+  width: 43px;
+  height: 43px;
+  background: url("../images/g+.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 31px;
+  left: 368px;
+  overflow: hidden;
+}
+.instagram {
+  width: 43px;
+  height: 43px;
+  background: url("../images/instagram.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 33px;
+  left: 441px;
+  overflow: hidden;
+}
+
+}*/
+/******************************************************* Media Queris*********************************************************************/
+
+/******************************************************* iPhone XR*********************************************************************/
+
+@media only screen and (min-width: 414px) and (max-width:896px) {
+
+.menuu{
+display: none; 
+}
+.omenu ul li a {
+  font-size: 4vw;
+}
+.carousel .item div h2{
+  font-size: 30px;
+}
+.carousel .item div h3{
+  font-size: 42px; 
+}
+.carousel .item p{
+  font-size: 14px; 
+}
+.about1{
+  align-content: center;
+  align-items: center;
+}
+.basicWexim a{
+  font-size: 18px;
+}
+.basicWexim h2{
+  font-size: 32px;   
+  width: 80%;
+}
+.lorem{
+  width: 100%; font-size:14px; 
+  padding: 0px 0px 0px 20px;
+  margin-bottom: 40px;
+}
+aside{
+  flex-direction: column;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  align-content: center;
+}
+.troisD P{
+  margin:0;
+}
+.bannerabouttitre {
+  display: flex;
+  font-size: 14px;
+  margin: 0px 0px 25px 36px;
+}
+.bannerabouttext {
+  width: 80%;
+  font-size: 24px;
+  margin: 0px 0px 25px 36px;
+}
+.banneraboutp {
+  width: 70%;
+  font-size: 9px;
+  margin: 0px 0px 10px 36px;
+}
+.team-bloc{
+  padding: 100px 0px 0px 0px;
+  height: 100%;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.team-box {
+  margin: 10% 10px;
+}
+
+.wx-blog .ligne{
+  margin: 10% 0% 20% 0%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.wx-blog .image-blog{
+  width: 100%;
+  height: 100%;
+}
+.wx-blog .image-blog img{
+  width: 100%;
+  height: 100%;
+  
+}
+.wx-blog .blog-box1{
+  margin: 10px 0px 0px 0;   
+  margin-left: 0;
+}
+.wx-blog .blog-box2{
+  margin-right: 0;
+  padding: 10px 0 40px 0;
+}
+.contact-adresse .information .i{
+  font-size: 14px;
+  position: absolute;
+  margin: -12% 0% 0% 10%;
+
+}
+.contact-adresse .information h2{
+  font-size: 22px;
+  position: absolute;
+  width: 150px;
+}
+.contact-adresse .information address{
+  margin: 17% 0% 0% 10%;
+  font-size: 14px;
+  position: absolute;
+  width: 150px;
+}
+.contact-adresse .information .liste-p{
+  margin: 31% 0% 0% 10%;
+  font-size: 10px; 
+  position: absolute;
+}
+}
+
+/******************************************************* iPad Air *********************************************************************/
+
+@media only screen and (min-width:896px) and (max-width:1180px) {
+
+  .menuu{
+  display: none; 
+  }
+  .omenu ul li a {
+    font-size: 4vw;
+  }
+  .carousel .item div h2{
+    font-size: 30px;
+  }
+  .carousel .item div h3{
+    font-size: 46px;
+  }
+  .carousel .item p{
+    font-size: 18px; 
+  }
+  .about1{
+    align-content: center;
+    align-items: center;
+  }
+  .basicWexim a{
+    margin-left: 15%;
+  }
+  .basicWexim h2{
+    margin-left: 15%;   
+    width: 80%;
+  }
+  .lorem{
+    margin-bottom: 40px;
+  }
+  aside{
+    flex-direction: column;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    align-content: center;
+  }
+  .troisD P{
+    margin:0;
+  }
+  .bannerabouttitre {
+    margin: 0% 0% 0% 33%;
+    font: 20px;
+  }
+  .bannerabouttext {
+    font-size: 36px;
+    text-align: center;
+  }
+  .banneraboutp {
+    width: 88%;
+    font-size: 12px;
+    margin: 0px 0px 10px 36px;
+    text-align: center;
+    
+  }
+  .team-bloc{
+    padding: 100px 0px 0px 0px;
+    height: 100%;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .team-box {
+    margin: 10% 10px;
+  }
+  
+  .wx-blog .ligne{
+    margin: 10% 0% 20% 0%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .wx-blog .image-blog{
+    width: 100%;
+    height: 100%;
+  }
+  .wx-blog .image-blog img{
+    width: 100%;
+    height: 100%;
+    
+  }
+  .wx-blog .blog-box1{
+    margin: 10px 0px 0px 0;   
+    margin-left: 0;
+  }
+  .wx-blog .blog-box2{
+    margin-right: 0;
+    padding: 10px 0 40px 0;
+  }
+  .information{
+    position: relative;
+  }
+  .contact-adresse .information .i{
+    font-size: 18px;
+    position: absolute;
+    margin: -24% 0% 0% 10%;
+    font-style:normal;
+  
+  }
+  .contact-adresse .information h2{
+    font-size: 30px;
+    position: absolute;
+  }
+  .contact-adresse .information address{
+    font-size: 18px;
+    position: absolute;
+    margin: 30% 0% 0% 10%;
+  }
+  .contact-adresse .information .liste-p{
+    font-size: 14px; 
+    position: absolute;
+    margin: 60% 0% 0% 10%;
+  }
+}
